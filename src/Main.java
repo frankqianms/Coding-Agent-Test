@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Personal Assistant for GitHub Copilot Coding Agent
@@ -19,7 +18,6 @@ public class Main {
         GitHubRepository repo = new GitHubRepository("frankqianms", "Coding-Agent-Test");
         IssueAnalyzer analyzer = new IssueAnalyzer();
         CopilotAssigner assigner = new CopilotAssigner();
-        Scanner scanner = new Scanner(System.in);
         
         // Fetch recent issues
         System.out.println("Fetching the 10 most recent issues from " + repo.getFullName() + "...\n");
@@ -27,7 +25,6 @@ public class Main {
         
         if (issues.isEmpty()) {
             System.out.println("No issues found in the repository.");
-            scanner.close();
             return;
         }
         
@@ -75,7 +72,5 @@ public class Main {
         
         System.out.println("Analysis complete! " + assigner.getAssignedIssues().size() + 
                          " out of " + issues.size() + " issues were assigned to Copilot.");
-        
-        scanner.close();
     }
 }

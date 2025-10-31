@@ -74,13 +74,7 @@ public class IssueAnalyzer {
         String desc = issue.getDescription().toLowerCase();
         
         // Exclude documentation-only tasks
-        boolean isDocumentationOnly = 
-            hasLabel(issue, "documentation") &&
-            !desc.contains("code") &&
-            !desc.contains("implement") &&
-            !desc.contains("api");
-        
-        if (isDocumentationOnly) {
+        if (isDocumentationOnly(issue)) {
             return false;
         }
         
@@ -94,6 +88,17 @@ public class IssueAnalyzer {
                hasLabel(issue, "bug") ||
                hasLabel(issue, "enhancement") ||
                hasLabel(issue, "feature");
+    }
+    
+    /**
+     * Checks if issue is documentation-only (not a coding task)
+     */
+    private boolean isDocumentationOnly(GitHubIssue issue) {
+        String desc = issue.getDescription().toLowerCase();
+        return hasLabel(issue, "documentation") &&
+               !desc.contains("code") &&
+               !desc.contains("implement") &&
+               !desc.contains("api");
     }
     
     /**
@@ -129,14 +134,7 @@ public class IssueAnalyzer {
         }
         
         if (!isCodingTask(issue)) {
-            String desc = issue.getDescription().toLowerCase();
-            boolean isDocumentationOnly = 
-                hasLabel(issue, "documentation") &&
-                !desc.contains("code") &&
-                !desc.contains("implement") &&
-                !desc.contains("api");
-            
-            if (isDocumentationOnly) {
+            if (isDocumentationOnly(issue)) {
                 return "Issue is documentation-only, not a coding task";
             }
             return "Issue does not appear to be a coding task";
