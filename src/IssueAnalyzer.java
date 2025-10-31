@@ -27,46 +27,73 @@ public class IssueAnalyzer {
         }
         
         // Check for complexity indicators in labels
+        if (isTooComplex(issue)) {
+            return false;
+        }
+        
+        // Check for acceptance criteria indicators
+        if (!hasAcceptanceCriteria(issue)) {
+            return false;
+        }
+        
+        // Check if it's a coding task (exclude documentation-only tasks)
+        return isCodingTask(issue);
+    }
+    
+    /**
+     * Checks if issue is too complex
+     */
+    private boolean isTooComplex(GitHubIssue issue) {
         for (String label : issue.getLabels()) {
             String lowerLabel = label.toLowerCase();
             if (lowerLabel.contains("complex") || 
                 lowerLabel.contains("major") ||
                 lowerLabel.contains("epic")) {
-                return false;
+                return true;
             }
         }
-        
-        // Check for acceptance criteria indicators
+        return false;
+    }
+    
+    /**
+     * Checks if issue has acceptance criteria indicators
+     */
+    private boolean hasAcceptanceCriteria(GitHubIssue issue) {
         String desc = issue.getDescription().toLowerCase();
-        boolean hasAcceptanceCriteria = 
-            desc.contains("acceptance criteria") ||
-            desc.contains("expected behavior") ||
-            desc.contains("should") ||
-            desc.contains("must") ||
-            desc.contains("requirements");
+        return desc.contains("acceptance criteria") ||
+               desc.contains("expected behavior") ||
+               desc.contains("should") ||
+               desc.contains("must") ||
+               desc.contains("requirements");
+    }
+    
+    /**
+     * Checks if issue is a coding task
+     */
+    private boolean isCodingTask(GitHubIssue issue) {
+        String desc = issue.getDescription().toLowerCase();
         
-        // Check if it's a coding task (exclude documentation-only tasks)
+        // Exclude documentation-only tasks
         boolean isDocumentationOnly = 
             hasLabel(issue, "documentation") &&
             !desc.contains("code") &&
             !desc.contains("implement") &&
             !desc.contains("api");
         
-        boolean isCodingTask = 
-            !isDocumentationOnly && (
-                desc.contains("implement") ||
-                desc.contains("add") ||
-                desc.contains("create") ||
-                desc.contains("fix") ||
-                desc.contains("update") ||
-                desc.contains("refactor") ||
-                desc.contains("code") ||
-                hasLabel(issue, "bug") ||
-                hasLabel(issue, "enhancement") ||
-                hasLabel(issue, "feature")
-            );
+        if (isDocumentationOnly) {
+            return false;
+        }
         
-        return hasAcceptanceCriteria && isCodingTask;
+        return desc.contains("implement") ||
+               desc.contains("add") ||
+               desc.contains("create") ||
+               desc.contains("fix") ||
+               desc.contains("update") ||
+               desc.contains("refactor") ||
+               desc.contains("code") ||
+               hasLabel(issue, "bug") ||
+               hasLabel(issue, "enhancement") ||
+               hasLabel(issue, "feature");
     }
     
     /**
@@ -93,48 +120,22 @@ public class IssueAnalyzer {
             return "Issue lacks a description";
         }
         
-        for (String label : issue.getLabels()) {
-            String lowerLabel = label.toLowerCase();
-            if (lowerLabel.contains("complex") || 
-                lowerLabel.contains("major") ||
-                lowerLabel.contains("epic")) {
-                return "Issue is too complex (has complexity indicator label)";
-            }
+        if (isTooComplex(issue)) {
+            return "Issue is too complex (has complexity indicator label)";
         }
         
-        String desc = issue.getDescription().toLowerCase();
-        boolean hasAcceptanceCriteria = 
-            desc.contains("acceptance criteria") ||
-            desc.contains("expected behavior") ||
-            desc.contains("should") ||
-            desc.contains("must") ||
-            desc.contains("requirements");
-        
-        if (!hasAcceptanceCriteria) {
+        if (!hasAcceptanceCriteria(issue)) {
             return "Issue lacks clear acceptance criteria";
         }
         
-        boolean isDocumentationOnly = 
-            hasLabel(issue, "documentation") &&
-            !desc.contains("code") &&
-            !desc.contains("implement") &&
-            !desc.contains("api");
-        
-        boolean isCodingTask = 
-            !isDocumentationOnly && (
-                desc.contains("implement") ||
-                desc.contains("add") ||
-                desc.contains("create") ||
-                desc.contains("fix") ||
-                desc.contains("update") ||
-                desc.contains("refactor") ||
-                desc.contains("code") ||
-                hasLabel(issue, "bug") ||
-                hasLabel(issue, "enhancement") ||
-                hasLabel(issue, "feature")
-            );
-        
-        if (!isCodingTask) {
+        if (!isCodingTask(issue)) {
+            String desc = issue.getDescription().toLowerCase();
+            boolean isDocumentationOnly = 
+                hasLabel(issue, "documentation") &&
+                !desc.contains("code") &&
+                !desc.contains("implement") &&
+                !desc.contains("api");
+            
             if (isDocumentationOnly) {
                 return "Issue is documentation-only, not a coding task";
             }
