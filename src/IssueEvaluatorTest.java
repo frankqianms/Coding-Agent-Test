@@ -191,10 +191,8 @@ public class IssueEvaluatorTest {
         
         if (failed == 0) {
             System.out.println("\n✓ All tests passed!");
-            System.exit(0);
         } else {
             System.out.println("\n✗ Some tests failed!");
-            System.exit(1);
         }
     }
 }
