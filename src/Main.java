@@ -20,7 +20,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // Display welcome message to the user
-        System.out.printf("Hello and welcome!");
+        System.out.println("Hello and welcome!");
 
         // Loop through numbers 1 to 5 and print each iteration
         // This demonstrates basic loop syntax and console output
