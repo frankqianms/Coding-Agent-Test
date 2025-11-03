@@ -1,14 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Main class - Entry point for the application
+ * 
+ * This is a simple demonstration program that prints a welcome message
+ * and displays numbers from 1 to 5 in a loop.
+ * 
+ * @author Coding Agent Test
+ * @version 1.0
+ */
 public class Main {
+    
+    /**
+     * Main method - Program execution starts here
+     * 
+     * This method performs two main tasks:
+     * 1. Prints a welcome message to the console
+     * 2. Iterates through numbers 1-5 and displays each value
+     * 
+     * @param args Command line arguments (not used in this implementation)
+     */
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+        // Display welcome message to the user
         System.out.printf("Hello and welcome!");
 
+        // Loop through numbers 1 to 5 and print each iteration
+        // This demonstrates basic loop syntax and console output
         for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+            // Print current iteration value with descriptive label
             System.out.println("i = " + i);
         }
     }
