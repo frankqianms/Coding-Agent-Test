@@ -18,7 +18,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // Display welcome message to greet the user
-        // Note: printf does not add a newline, so first loop output will appear on the same line
+        // Note: printf does not add a newline, so the first loop output will continue on the same line
         System.out.printf("Hello and welcome!");
 
         // Print numbers 1 through 5 to demonstrate basic loop iteration
