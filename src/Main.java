@@ -18,16 +18,11 @@ public class Main {
      */
     public static void main(String[] args) {
         // Display welcome message to greet the user
-        // Note: printf is used here without a newline, so the output will be on the same line
-        // as the subsequent loop output unless explicitly handled
+        // Note: printf does not add a newline, so first loop output will appear on the same line
         System.out.printf("Hello and welcome!");
 
-        // Iterate from 1 to 5 (inclusive) to demonstrate loop functionality
-        // This loop showcases a standard counting pattern commonly used in Java
-        // Each iteration prints the current counter value in a formatted string
+        // Print numbers 1 through 5 to demonstrate basic loop iteration
         for (int i = 1; i <= 5; i++) {
-            // Print the current iteration number
-            // The format "i = <value>" provides clear output showing the variable name and its value
             System.out.println("i = " + i);
         }
     }
