@@ -1,3 +1,7 @@
+# Test File
+# Purpose: This is a sample test file used for testing and demonstration purposes.
+# It contains multiple lines of text to demonstrate file reading and processing.
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
