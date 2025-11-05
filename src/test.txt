@@ -1,0 +1,39 @@
+# Test Context File
+# ====================
+# This file contains context information and documentation for the Coding-Agent-Test repository
+#
+# Purpose:
+# --------
+# This file serves as a context document to explain the structure and purpose of the test repository.
+# It provides guidance for developers and AI coding agents working with this codebase.
+#
+# Repository Structure:
+# ---------------------
+# - src/Main.java: The main application file containing a simple Java program
+#                  that demonstrates basic console output and loop iteration
+#
+# Build Instructions:
+# -------------------
+# To compile the Java code:
+#   javac src/Main.java
+#
+# To run the compiled program:
+#   java -cp src Main
+#
+# Expected Output:
+# ----------------
+# The program should print:
+# - A welcome message: "Hello and welcome!"
+# - Five lines showing iteration values: "i = 1" through "i = 5"
+#
+# Development Environment:
+# ------------------------
+# This project is configured for IntelliJ IDEA, as indicated by:
+# - Coding-Agent-Test.iml: IntelliJ project configuration
+# - .idea/ directory: IDE settings (gitignored)
+#
+# Notes:
+# ------
+# - This is a test repository for demonstrating coding agent capabilities
+# - The code includes IntelliJ IDEA tips and shortcuts for developer convenience
+# - All compiled .class files should be gitignored to keep the repository clean
