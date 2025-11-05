@@ -1,3 +1,7 @@
+# Test File
+# This is a simple test file used for demonstration purposes.
+# It contains multiple lines of text to showcase file structure.
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
