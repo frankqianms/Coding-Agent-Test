@@ -1,3 +1,8 @@
+# Test File
+# Purpose: This is a sample text file for testing purposes
+# It demonstrates a simple multi-line text structure
+# --------------------------------------------------
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
