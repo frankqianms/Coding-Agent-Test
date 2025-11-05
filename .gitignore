@@ -1,9 +1,19 @@
+# ============================================
+# Git Ignore Configuration
+# ============================================
+# Purpose: Specifies intentionally untracked files that Git should ignore
+# This file prevents IDE configurations, build outputs, and OS-specific 
+# files from being committed to the repository
+# ============================================
+
 ### IntelliJ IDEA ###
+# Build output directory
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
 ### Eclipse ###
+# Eclipse-specific configuration and build files
 .apt_generated
 .classpath
 .factorypath
@@ -16,6 +26,7 @@ bin/
 !**/src/test/**/bin/
 
 ### NetBeans ###
+# NetBeans project-specific files
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -23,7 +34,13 @@ bin/
 /.nb-gradle/
 
 ### VS Code ###
+# Visual Studio Code configuration
 .vscode/
 
 ### Mac OS ###
+# macOS system files
 .DS_Store
+
+### Java ###
+# Compiled Java class files
+*.class
