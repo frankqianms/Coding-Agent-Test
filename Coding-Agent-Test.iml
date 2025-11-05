@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    IntelliJ IDEA Module Configuration File
+    
+    Purpose: Defines module structure and configuration for IntelliJ IDEA
+    This file specifies source folders, dependencies, and build settings
+    for the Coding-Agent-Test project
+    
+    Module Type: JAVA_MODULE - Standard Java application module
+-->
 <module type="JAVA_MODULE" version="4">
+  <!-- Module root manager: Manages source roots, dependencies, and output paths -->
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <!-- Source folder configuration: Marks 'src' as the source root -->
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
+    <!-- JDK inheritance: Uses the project's configured JDK -->
     <orderEntry type="inheritedJdk" />
+    <!-- Source folder dependencies -->
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -1,3 +1,9 @@
+# Test File
+# Purpose: This is a sample test file used for demonstration purposes
+# It contains multiple lines of text to showcase file handling capabilities
+# Author: Coding-Agent-Test
+# Created: 2025
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
