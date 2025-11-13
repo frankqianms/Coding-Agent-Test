@@ -1,0 +1,21 @@
+# config.txt
+# 
+# This file is located in a subdirectory (src/utils/) to demonstrate
+# how comments can be added to text files within nested folder structures.
+# 
+# File Purpose: Configuration settings file
+# Location: src/utils/config.txt
+# Format: Plain text with hash-based comments
+# Author: Coding Agent Test
+
+# Application Configuration Settings
+app.name=CodingAgentTest
+app.version=1.0.0
+
+# Database Configuration
+db.host=localhost
+db.port=5432
+
+# Logging Configuration
+log.level=INFO
+log.file=/var/log/app.log
