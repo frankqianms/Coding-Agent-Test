@@ -1,3 +1,8 @@
+# test.txt - Sample Test File
+# This file is used for testing purposes
+# It contains multiple lines of text to demonstrate file content handling
+# Created for: Coding Agent Test Repository
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
