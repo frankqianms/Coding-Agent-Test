@@ -1,6 +1,23 @@
+/**
+ * Main class - Entry point for the application
+ * 
+ * This class demonstrates a simple Java program that prints a welcome message
+ * and iterates through numbers 1 to 5, printing each value to the console.
+ * 
+ * @author Coding Agent Test
+ * @version 1.0
+ */
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    /**
+     * Main method - Entry point of the Java application
+     * 
+     * Prints a welcome message and demonstrates a simple loop that
+     * iterates from 1 to 5, printing each iteration value.
+     * 
+     * @param args Command line arguments (not used in this application)
+     */
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
