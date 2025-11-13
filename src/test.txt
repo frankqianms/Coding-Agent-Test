@@ -1,3 +1,12 @@
+# test.txt
+# 
+# This is a sample text file for testing purposes.
+# It demonstrates how comments can be added to plain text files.
+# 
+# File Purpose: Testing and demonstration
+# Created: 2024
+# Format: Plain text with hash-based comments
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
