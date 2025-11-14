@@ -1,3 +1,10 @@
+# test.txt - Sample text file for testing purposes
+# This file contains multiple lines of text to demonstrate
+# how text files can include comments and content
+#
+# File created: 2025-11-14
+# Purpose: Testing and demonstration
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
