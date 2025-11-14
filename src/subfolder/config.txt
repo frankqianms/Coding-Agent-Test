@@ -1,0 +1,52 @@
+====================================
+CONFIGURATION FILE DOCUMENTATION
+====================================
+File: config.txt
+Location: src/subfolder/
+Purpose: Sample configuration file with annotations
+Type: Text configuration file
+====================================
+
+# APPLICATION CONFIGURATION
+# This section contains application settings
+
+# Server Settings
+server.port=8080
+server.host=localhost
+
+# Database Configuration
+# Note: These are sample values for demonstration
+database.url=jdbc:mysql://localhost:3306/testdb
+database.username=admin
+database.password=********
+
+# Logging Settings
+# Configure logging levels: DEBUG, INFO, WARN, ERROR
+logging.level=INFO
+logging.file=app.log
+
+# Feature Flags
+# Enable or disable specific features (true/false)
+feature.newui=true
+feature.beta=false
+
+====================================
+CONFIGURATION NOTES:
+- This file demonstrates how to add comments to configuration files in subfolders
+- Each setting is documented with inline comments using the # symbol
+- Settings are organized into logical sections
+- Sensitive information (like passwords) should be stored securely
+====================================
+
+# Additional Settings
+# Cache configuration
+cache.enabled=true
+cache.size=1000
+
+# Timeout values in milliseconds
+connection.timeout=5000
+read.timeout=3000
+
+====================================
+END OF CONFIGURATION
+====================================
