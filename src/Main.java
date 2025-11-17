@@ -11,5 +11,16 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+        
+        // Additional functionality added at line 16
+        printSummary(5);
+    }
+    
+    /**
+     * Prints a summary message with the given count.
+     * @param count The number of iterations completed
+     */
+    private static void printSummary(int count) {
+        System.out.println("\nSummary: Completed " + count + " iterations successfully!");
     }
 }
