@@ -12,4 +12,9 @@ public class Main {
             System.out.println("i = " + i);
         }
     }
+
+    // Additional helper method
+    public static void printMessage(String message) {
+        System.out.println("Message: " + message);
+    }
 }
