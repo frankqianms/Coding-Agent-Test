@@ -11,5 +11,34 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+        
+        // Additional functionality added at line 16
+        System.out.println("\nDemonstrating additional features:");
+        displaySquares(5);
+        System.out.println("Sum of numbers 1-10: " + calculateSum(10));
+    }
+    
+    /**
+     * Displays the squares of numbers from 1 to n
+     * @param n the upper limit
+     */
+    private static void displaySquares(int n) {
+        System.out.println("Squares:");
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i + "² = " + (i * i));
+        }
+    }
+    
+    /**
+     * Calculates the sum of numbers from 1 to n
+     * @param n the upper limit
+     * @return the sum of numbers from 1 to n
+     */
+    private static int calculateSum(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
     }
 }
