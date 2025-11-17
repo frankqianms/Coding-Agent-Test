@@ -12,4 +12,19 @@ public class Main {
             System.out.println("i = " + i);
         }
     }
+
+    // Example: Add a static method to calculate factorial
+    public static int factorial(int n) {
+        if (n < 0) throw new IllegalArgumentException("Negative input not allowed");
+        int result = 1;
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    // Example: Add a static method to reverse a string
+    public static String reverse(String input) {
+        return new StringBuilder(input).reverse().toString();
+    }
 }
