@@ -11,5 +11,20 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Demonstrate the new static methods
+        System.out.println("\nDemo of static methods:");
+        System.out.println("sum(5, 3) = " + sum(5, 3));
+        System.out.println("reverse(\"Hello\") = " + reverse("Hello"));
+    }
+
+    // Example: Add a static method to sum two integers
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+
+    // Example: Add a static method to reverse a string
+    public static String reverse(String input) {
+        return new StringBuilder(input).reverse().toString();
     }
 }
