@@ -1,0 +1,11 @@
+# Notes File
+# Author: System
+# Description: Notes file demonstrating comment addition in nested subfolder
+# Date: 2025-11-17
+
+These are sample notes showing that comments can be added to files
+in deeply nested folder structures.
+
+Note 1: Comments are important for code documentation
+Note 2: This file is in src/subfolder/nested/
+Note 3: All files now have appropriate header comments

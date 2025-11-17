@@ -1,0 +1,8 @@
+# Configuration File
+# Author: System
+# Description: Configuration file demonstrating comment addition in subfolder
+# Date: 2025-11-17
+
+config.key1=value1
+config.key2=value2
+config.enabled=true

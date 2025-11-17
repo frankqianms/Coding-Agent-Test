@@ -1,3 +1,8 @@
+# Test File
+# Author: System
+# Description: This is a sample test file demonstrating comment addition
+# Date: 2025-11-17
+
 this is a test file.
 It contains multiple lines.
 This is the third line.
