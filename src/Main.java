@@ -11,5 +11,25 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Test the new methods
+        System.out.println("\nTesting factorial method:");
+        System.out.println("factorial(5) = " + factorial(5));
+        System.out.println("factorial(0) = " + factorial(0));
+        
+        System.out.println("\nTesting reverse method:");
+        System.out.println("reverse(\"hello\") = " + reverse("hello"));
+        System.out.println("reverse(\"Java\") = " + reverse("Java"));
+    }
+
+    // Example: Add a method to calculate the factorial of a number
+    public static int factorial(int n) {
+        if (n <= 1) return 1;
+        return n * factorial(n - 1);
+    }
+
+    // Example: Add a method to reverse a string
+    public static String reverse(String s) {
+        return new StringBuilder(s).reverse().toString();
     }
 }
