@@ -11,5 +11,40 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Additional functionality
+        int sum = calculateSum(1, 5);
+        System.out.println("\nSum of numbers 1 to 5: " + sum);
+        
+        System.out.println("\nChecking even numbers:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(formatNumberInfo(i));
+        }
+    }
+
+    /**
+     * Calculates the sum of numbers in a range from start to end (inclusive)
+     */
+    public static int calculateSum(int start, int end) {
+        int sum = 0;
+        for (int i = start; i <= end; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    /**
+     * Checks if a number is even
+     */
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
+    /**
+     * Formats number information including whether it's even or odd
+     */
+    public static String formatNumberInfo(int number) {
+        String evenOrOdd = isEven(number) ? "even" : "odd";
+        return number + " is " + evenOrOdd;
     }
 }
