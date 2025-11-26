@@ -11,5 +11,15 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Calculate and display the sum of numbers from 1 to 5
+        int sum = 0;
+        for (int i = 1; i <= 5; i++) {
+            sum += i;
+        }
+        System.out.println("Sum of numbers 1 to 5: " + sum);
+
+        // Display current date and time
+        System.out.println("Current time: " + java.time.LocalDateTime.now());
     }
 }
