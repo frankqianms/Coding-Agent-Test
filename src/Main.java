@@ -23,10 +23,13 @@ public class Main {
 
     /**
      * Calculates the sum of numbers from 1 to n.
-     * @param n the upper limit of the range
-     * @return the sum of numbers from 1 to n
+     * @param n the upper limit of the range (must be non-negative)
+     * @return the sum of numbers from 1 to n, or 0 if n is negative
      */
     public static int calculateSum(int n) {
+        if (n < 0) {
+            return 0;
+        }
         int sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += i;
@@ -36,9 +39,12 @@ public class Main {
 
     /**
      * Displays a personalized greeting message.
-     * @param name the name to greet
+     * @param name the name to greet (defaults to "Guest" if null or empty)
      */
     public static void greet(String name) {
+        if (name == null || name.isEmpty()) {
+            name = "Guest";
+        }
         System.out.println("Hello, " + name + "! Welcome to the program.");
     }
 }
