@@ -11,5 +11,37 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Calculate and display the sum of numbers from 1 to 5
+        int sum = calculateSum(5);
+        System.out.println("Sum of numbers from 1 to 5: " + sum);
+
+        // Display a greeting message
+        String greeting = getGreeting("Java Developer");
+        System.out.println(greeting);
+    }
+
+    /**
+     * Calculates the sum of numbers from 1 to n.
+     *
+     * @param n the upper limit of the range
+     * @return the sum of numbers from 1 to n
+     */
+    public static int calculateSum(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    /**
+     * Returns a personalized greeting message.
+     *
+     * @param name the name of the person to greet
+     * @return a greeting message
+     */
+    public static String getGreeting(String name) {
+        return "Welcome, " + name + "! Happy coding!";
     }
 }
