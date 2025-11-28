@@ -11,5 +11,34 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Calculate and display the sum of numbers from 1 to 10
+        int sum = calculateSum(10);
+        System.out.println("\nSum of numbers from 1 to 10: " + sum);
+
+        // Display a greeting message
+        String name = "User";
+        greet(name);
+    }
+
+    /**
+     * Calculates the sum of numbers from 1 to n.
+     * @param n the upper limit of the range
+     * @return the sum of numbers from 1 to n
+     */
+    public static int calculateSum(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    /**
+     * Displays a personalized greeting message.
+     * @param name the name to greet
+     */
+    public static void greet(String name) {
+        System.out.println("Hello, " + name + "! Welcome to the program.");
     }
 }
