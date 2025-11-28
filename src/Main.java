@@ -11,5 +11,25 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // Calculate and display the sum of numbers from 1 to 5
+        int sum = calculateSum(5);
+        System.out.println("Sum of numbers from 1 to 5: " + sum);
+    }
+
+    /**
+     * Calculates the sum of numbers from 1 to n.
+     * @param n the upper limit of the sum (must be non-negative)
+     * @return the sum of numbers from 1 to n, or 0 if n is negative
+     */
+    public static int calculateSum(int n) {
+        if (n < 0) {
+            return 0;
+        }
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
     }
 }
