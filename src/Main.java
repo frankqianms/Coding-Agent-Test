@@ -25,9 +25,12 @@ public class Main {
      * Calculates the sum of numbers from 1 to n.
      *
      * @param n the upper limit of the range
-     * @return the sum of numbers from 1 to n
+     * @return the sum of numbers from 1 to n, or 0 if n is negative
      */
     public static int calculateSum(int n) {
+        if (n < 0) {
+            return 0;
+        }
         int sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += i;
@@ -42,6 +45,9 @@ public class Main {
      * @return a greeting message
      */
     public static String getGreeting(String name) {
+        if (name == null || name.isEmpty()) {
+            return "Welcome! Happy coding!";
+        }
         return "Welcome, " + name + "! Happy coding!";
     }
 }
